@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    font-family: sans-serif, cursive;
+    height: 100vh;
+    background-image: url('../img/cbandicoot.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.lower {
+    color: #FFF;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.right {
+    float: right;
+}
