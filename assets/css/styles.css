@@ -197,6 +197,45 @@ progress::-moz-progress-bar {
     background-color: var(--first-color);
 }
 
+/******* Modal ***********/
+.modal {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    background-color: var(--black-alpha-color);
+    pointer-events: none;
+    transition: all 1s;
+}
+
+.modal-content {
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.modal-close svg {
+    width: 3rem;
+    height: 3rem;
+    fill: var(--first-color);
+}
+
+.modal[id|="project"]:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/******* //Modal ***********/
 @media screen and (min-width: 1024px) {
     .menu-btn {
         display: none;
@@ -378,6 +417,31 @@ progress::-moz-progress-bar {
     height: 100%;
 }
 
+.portfolio-modal {
+    padding: 1rem;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white-color);
+}
+
+.portfolio-modal h3 {
+    border-bottom: medium solid var(--first-color);
+    padding: .5rem 0;
+    margin: 1rem auto;
+    color: var(--title-color);
+}
+
+.portfolio-details {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-auto-rows: 2rem;
+}
+
+.portfolio-details b {
+    color: var(--first-color);
+}
+
 .service-card {
     margin: 1rem auto;
     padding: 1rem;
@@ -401,6 +465,16 @@ progress::-moz-progress-bar {
 
     .portfolio .section-title {
         grid-column: span 2;
+    }
+
+    .portfolio-modal {
+        max-width: 800px;
+        flex-direction: row;
+    }
+
+    .portfolio-info {
+        margin-left: 1rem;
+        align-self: center;
     }
 
     .services > .container {
